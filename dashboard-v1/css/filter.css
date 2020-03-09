@@ -1,0 +1,88 @@
+/*variables;*/
+:root{
+	--primary : #F6F6F6;
+	--secodary: #555BAF;
+}
+/*reset*/
+body,p,a,ul,li{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	font-family: 'Roboto';
+	font-size: 16px;
+}
+li {
+	list-style-type: none;
+}
+/*fonts*/
+@font-face{
+	font-family: 'Roboto';
+	src: url('../../assets/Roboto/roboto.ttf');
+}
+h1 {
+font-weight: normal;
+font-size: 1.3em;
+}
+
+h2 {
+font-weight: normal;
+font-size: 1.1em
+}
+h3 {
+	font-weight: normal;
+	font-size: 1.1em;
+}
+
+h4 {
+font-size: 1em;
+font-weight: normal;
+}
+
+.clearfix{
+	clear: both;
+}
+
+/*base styles*/
+body {
+	background: var(--primary);
+	-webkit-overflow-x : hidden;
+	   -moz-overflow-x : hidden;
+	    -ms-overflow-x : hidden;
+	     -o-overflow-x : hidden;
+	        overflow-x : hidden;
+
+}
+
+
+/*mobile style*/
+
+
+
+
+
+@media screen and (min-width: 500px) {
+
+
+}
+
+@media screen and (min-width: 620px) {
+
+
+}
+
+@media screen and (min-width: 790px) {
+
+
+
+}
+/*tablet & laptop */
+@media screen and (min-width: 960px) {
+	
+	
+
+
+/*desktop style*/
+@media screen and (min-width: 1200px) {
+
+
+}

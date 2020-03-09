@@ -1,0 +1,286 @@
+:root{
+	--primary : #F6F6F6;
+	--secodary: #555BAF;
+}
+
+
+/*Reset CSS*/
+
+body,p,a{
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	font-size: 16px;
+}
+
+
+/*Base Styles*/
+
+body {
+	background: var(--primary);
+	-webkit-overflow-x: hidden;
+	   -moz-overflow-x: hidden;
+	    -ms-overflow-x: hidden;
+	     -o-overflow-x: hidden;
+	        overflow-x: hidden;
+	font-family: 'RobotoFonts';
+}
+
+/*Fonts*/
+
+h1,h2,h3,h4{
+	font-weight: normal;
+}
+
+h1{
+	font-size: 1.3em;
+}
+h2{
+	font-size: 1.2em
+}
+h3{
+	font-size: 1.1em;
+}
+h4{
+	font-size: 1em;
+}
+p {
+	font-size: .9em;
+}
+
+@font-face{
+	font-family: 'RobotoFonts';
+	src : url('../assets/Roboto/roboto.ttf');
+}
+
+
+
+/*Mobile Style*/
+
+.hero {
+
+	background: white;
+	border-radius: 20px;
+	position: absolute;
+	top:50%;
+	left: 50%;
+	box-shadow: 1px 1px 10px rgba(0,0,0,.1);
+	transform: translate(-50%,-50%);
+	width: 90%;
+	overflow:hidden;
+	box-sizing: border-box;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(8,1fr);
+}
+
+.hero img {
+	grid-column: 1/9;
+	width: 50px;
+	padding: 10px;
+}
+
+.hero .circle-top {
+	position: absolute;
+	width: 100px;
+	top: -40px;
+	right: -35px;
+	height: 100px;
+	border-radius: 50px;
+	background: var(--secodary);
+}
+
+.circle-top .circle-child-top{
+	width: 50px;
+	top:32px;
+	height: 50px;
+	left: 20px;
+	position: absolute;
+	background: white;
+	border-radius: 50px;
+}
+
+.hero .circle-bottom {
+	position: absolute;
+	width: 100px;
+	bottom: -40px;
+	left: -35px;
+	height: 100px;
+	border-radius: 50px;
+	background: var(--secodary);
+}
+
+.circle-bottom .circle-child-bottom{
+	width: 50px;
+	height: 50px;
+	bottom: 33px;
+	right: 20px;
+	position: absolute;
+	background: white;
+	border-radius: 50px;
+}
+
+.hero form {
+	grid-column: 1/9;
+	padding: 0 0;
+	box-sizing: border-box;
+	width: 80%;
+	margin: 15px auto;
+}
+
+form .txt_field{
+	position: relative;
+	border-bottom: 2px solid #adadad;
+	margin: 30px 0 25px;
+}
+
+.txt_field input {
+	width: 90%;
+	padding: 0 0 0 48px;
+	height: 40px;
+	border :none;
+	background: none;
+	outline:none;
+	font-size: .9em;
+}
+
+.txt_field label {
+	position: absolute;
+	top:50%;
+	left:48px;
+	color: #adadad;
+	-webkit-transform: translateY(-50%);
+	   -moz-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	     -o-transform: translateY(-50%);
+	        transform: translateY(-50%);
+	font-size: 0.9em;
+	pointer-events: none;
+	-webkit-transition: .5s;
+	   -moz-transition: .5s;
+	    -ms-transition: .5s;
+	     -o-transition: .5s;
+	        transition: .5s;
+}
+
+.txt_field i::after {
+	content: '';
+	border-left: 2px solid silver;
+	margin-left: 11px;
+	-webkit-transition: .3s;
+	   -moz-transition: .3s;
+	    -ms-transition: .3s;
+	     -o-transition: .3s;
+	        transition: .3s;
+}
+
+.txt_field i {
+	position: absolute;
+	top: 50%;
+	left: 10px;
+	-webkit-transform: translateY(-50%);
+	   -moz-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	     -o-transform: translateY(-50%);
+	        transform: translateY(-50%);
+	color: #555BAF;
+
+}
+
+.txt_field span::before {
+	content: '';
+	position: absolute;
+	top:40px;
+	left:0;
+	width: 0%;
+	height: 2px;
+	background: #555BAF;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-ms-transition: .5s;
+	-o-transition: .5s;
+	transition: .5s;
+
+}
+
+.txt_field .input.focus ~ label {
+	top: -7px;
+	color:  #555BAF;
+}
+
+.txt_field .input.focus ~ span::before{
+width: 100%;
+}
+
+.txt_field input.focus ~ i::after{
+border-left: 2px solid #555BAF;
+}
+
+
+.button{
+	display: flex;
+	justify-content: flex-end;
+}
+button[type="submit"]{
+	
+	width: 50%;
+	height: 35px;
+	border-radius: 5px;
+	font-size: .9em;
+	color:#e9f4fb;
+	font-weight: 700;
+	cursor: pointer;
+	outline: none;
+	margin: 0 0 30px; 
+	text-transform: uppercase;
+	background-image: linear-gradient(to right, #555BAF, #6C73D7, #555BAF);
+	cursor: pointer;
+	background-size: 200%;
+	-webkit-transition: .3s;
+	   -moz-transition: .3s;
+	    -ms-transition: .3s;
+	     -o-transition: .3s;
+	        transition: .3s;
+
+}
+
+button[type="submit"]:hover {
+		background-position: right;
+}
+
+
+
+
+@media screen and ( min-width: 400px) {
+	.hero {
+		width: 90%;
+		max-width: 400px;
+
+	}
+
+	.txt_field input {
+		width: 85%;
+	}
+}
+
+
+
+/*Small Tablet Style*/
+@media screen and (min-width: 620px) {
+
+}
+
+
+/*Large Tablets and Laptop Style*/
+@media screen and (min-width: 960px) {
+
+}
+
+
+
+/*Desktop Style*/
+@media screen and (min-width: 1200px) {
+
+}

@@ -1,0 +1,175 @@
+/*variables;*/
+:root{
+	--primary : #F6F6F6;
+	--secodary: #555BAF;
+}
+/*reset*/
+body,p,a,ul,li{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	font-family: 'Roboto';
+	font-size: 16px;
+}
+li {
+	list-style-type: none;
+}
+/*fonts*/
+@font-face{
+	font-family: 'Roboto';
+	src: url('../../assets/Roboto/roboto.ttf');
+}
+h1 {
+font-weight: normal;
+font-size: 1.3em;
+}
+
+h2 {
+font-weight: normal;
+font-size: 1.1em
+}
+h3 {
+	font-weight: normal;
+	font-size: 1.1em;
+}
+
+h4 {
+font-size: 1em;
+font-weight: normal;
+}
+
+.clearfix{
+	clear: both;
+}
+
+/*base styles*/
+body {
+	background: var(--primary);
+	-webkit-overflow-x : hidden;
+	   -moz-overflow-x : hidden;
+	    -ms-overflow-x : hidden;
+	     -o-overflow-x : hidden;
+	        overflow-x : hidden;
+
+}
+
+
+/*mobile style*/
+
+/*PNS*/
+
+
+
+.main-content .btn-add-pns{
+	grid-column: 1/9;
+	padding: 25px 0 0 20px;
+
+}
+
+.btn-add-pns button{
+	height: 35px;
+	border-radius: 5px;
+	border:none;
+	width: 125px;
+	background: var(--secodary);
+	color: white;
+}
+
+.btn-add-pns button i {
+	padding-right: 5px;
+}
+
+.main-content .search-box-pns{
+	grid-column: 1/9;
+	padding: 30px 0 20px 20px;
+}
+
+.search-box-pns .search-txt{
+	width: 75%;
+	padding: 10px 10px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border: 1px solid #C1C1C1;
+	outline: none;
+	font-size: .9em;	
+	transition: .3s;
+}
+.search-box-pns .search-txt:focus{
+	transition: .3s;
+	box-shadow: 1px 1px 10px rgba(85,91,175,.7);
+}
+.search-box-pns .search-btn {
+	height: 37px;
+	width: 34px;
+	transform: translate(-5px,0);
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border:none;
+	background-color: var(--secodary);
+	color: white;
+	cursor: pointer;
+	transition: .3s;
+}
+.search-box-pns .search-btn:hover{
+	background-color: #40469E;
+}
+
+.table-list-pns{
+	grid-column: 1/9;
+}
+/*PNS*/
+
+
+@media screen and (min-width: 500px) {
+
+	/*pns*/
+	.main-content .btn-add-pns{
+		grid-column: 1/4;
+		padding-left: 30px;
+	}
+
+	.main-content .search-box-pns{
+		grid-column: 4/9;
+		padding-top: 24px;
+		padding-left: 30px;
+
+	}
+
+	/*pns*/
+
+}
+
+@media screen and (min-width: 620px) {
+
+
+}
+
+@media screen and (min-width: 790px) {
+
+
+
+}
+/*tablet & laptop */
+@media screen and (min-width: 960px) {
+	
+	
+	/*pns*/
+	.main-content .btn-add-pns{
+		padding-left: 30px;
+	}
+	.main-content .search-box-pns{
+		grid-column: 5/9;
+	}
+	  .search-box-pns .search-txt{
+	  	width: 80%;
+	  }
+	/*pns*/
+
+
+
+
+/*desktop style*/
+@media screen and (min-width: 1200px) {
+
+
+}
